@@ -1,9 +1,12 @@
-# enable HDaudio support in SST/SOF. this will only have
-# an effect if SST/SOF are selected in the first place.
-
-CONFIG_SND_SOC_INTEL_SKYLAKE_HDAUDIO_CODEC=y
-CONFIG_SND_SOC_SOF_HDA_AUDIO_CODEC=y
 CONFIG_SND_HDA_INTEL=m
+
+# enable HDaudio support in SST
+CONFIG_SND_SOC_INTEL_SKYLAKE_HDAUDIO_CODEC=y
+
+
+# enable HDaudio in SOF. this might be redundant with sof-mach-driver-defconfig
+CONFIG_SND_SOC_SOF_HDA_LINK=y
+CONFIG_SND_SOC_SOF_HDA_AUDIO_CODEC=y
 
 # machine driver for HDaudio support
 CONFIG_SND_SOC_INTEL_SKL_HDA_DSP_GENERIC_MACH=m

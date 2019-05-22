@@ -26,7 +26,7 @@ Then select one of the three options
 ````bash
 scripts/kconfig/merge_config.sh .config <PATH>/kconfig/base-defconfig <PATH>/kconfig/hdaudio-codecs-defconfig
 scripts/kconfig/merge_config.sh .config <PATH>/kconfig/base-defconfig <PATH>/kconfig/sst-defconfig <PATH>/kconfig/hdaudio-codecs-defconfig
-scripts/kconfig/merge_config.sh .config <PATH>/kconfig/base-defconfig <PATH>/kconfig/sof-defconfig <PATH>/kconfig/hdaudio-codecs-defconfig
+scripts/kconfig/merge_config.sh .config <PATH>/kconfig/base-defconfig <PATH>/kconfig/sof-defconfig <PATH>/kconfig/sof-mach-driver-defconfig <PATH>/kconfig/hdaudio-codecs-defconfig
 ````
 
 then build as usual

@@ -47,6 +47,7 @@ Additional fragments:
 - notrace-debugfs-defconfig: remove debugfs, useful for error handling
 - snd-drm-modules-defconfig: build sound and DRM as modules
 - up-defconfig: config for up board
+- telemetry-debugfs-defconfig: config snippet for S0ix telemetry debugfs support
 
 
 Enjoy!

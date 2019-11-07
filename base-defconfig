@@ -171,6 +171,8 @@ CONFIG_MOUSE_ELAN_SMBUS=y
 CONFIG_HID_MULTITOUCH=m
 CONFIG_ACPI_WMI=m
 CONFIG_WMI_BMOF=m
+
+# I2C touchpad (Dell, Asus and many other laptops)
 CONFIG_I2C_HID=m
 
 # USB Sound Card Support

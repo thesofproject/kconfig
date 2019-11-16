@@ -9,7 +9,8 @@ The base-defconfig is intended to provide basic support for all platforms curren
 - WiFi
 
 
-sof-defconfig lists all the options for SOF.
+sof-defconfig lists all the options for SOF which can be enabled by distros
+sof-dev-defconfig lists all SOF developer options which should not be enabled by distros. This file in included in all SOF CI configurations.
 sst-defconfig lists all the options for the SST driver.
 hdaudio-defconfig lists all the options for HDaudio codec support.
 sof-mach-driver-defconfig lists all the optiosn for SOF enabled machine driver support.
@@ -48,6 +49,8 @@ Or you can generate above pre-defined kconfig with scripts:
 <PATH>/kconfig/kconfig-sof-nocodec.sh
 <PATH>/kconfig/kconfig-sof-default.sh
 ````
+
+Note that the last two options include developer options not suitable for distros.
 
 then build as usual
 ````bash

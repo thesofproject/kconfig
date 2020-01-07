@@ -23,5 +23,6 @@ make defconfig
 $COMMAND .config \
 	 $KCONFIG_DIR/base-defconfig \
 	 $KCONFIG_DIR/sst-defconfig \
+	 $KCONFIG_DIR/mach-driver-defconfig \
 	 $KCONFIG_DIR/hdaudio-codecs-defconfig \
 	 $@

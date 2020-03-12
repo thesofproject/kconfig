@@ -13,7 +13,7 @@ sof-defconfig lists all the options for SOF which can be enabled by distros
 sof-dev-defconfig lists all SOF developer options which should not be enabled by distros. This file in included in all SOF CI configurations.
 sst-defconfig lists all the options for the SST driver.
 hdaudio-defconfig lists all the options for HDaudio codec support.
-sof-mach-driver-defconfig lists all the optiosn for SOF enabled machine driver support.
+mach-driver-defconfig lists all the optiosn for SOF enabled machine driver support.
 soundwire-defconfig lists all the options for SoundWire support.
 
 Those fragments are supposed to be applied on top of a default kernel
@@ -39,7 +39,7 @@ scripts/kconfig/merge_config.sh .config <PATH>/kconfig/base-defconfig <PATH>/kco
 ````
 - SOF-DEFAULT: SOF support with I2S, HDA and SDW support with machine drivers
 ````bash
-scripts/kconfig/merge_config.sh .config <PATH>/kconfig/base-defconfig <PATH>/kconfig/sof-defconfig <PATH>/kconfig/sof-mach-driver-defconfig <PATH>/kconfig/hdaudio-codecs-defconfig <PATH>/kconfig/soundwire-defconfig
+scripts/kconfig/merge_config.sh .config <PATH>/kconfig/base-defconfig <PATH>/kconfig/sof-defconfig <PATH>/kconfig/mach-driver-defconfig <PATH>/kconfig/hdaudio-codecs-defconfig <PATH>/kconfig/soundwire-defconfig
 ````
 
 Or you can generate above pre-defined kconfig with scripts:

@@ -26,4 +26,5 @@ $COMMAND .config \
 	 $KCONFIG_DIR/sof-dev-defconfig  \
 	 $KCONFIG_DIR/mach-driver-defconfig \
 	 $KCONFIG_DIR/hdaudio-codecs-defconfig \
+	 $KCONFIG_DIR/telemetry-debugfs-defconfig \
 	 $KCONFIG_DIR/soundwire-defconfig $@

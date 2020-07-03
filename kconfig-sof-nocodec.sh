@@ -25,4 +25,6 @@ $COMMAND .config \
 	 $KCONFIG_DIR/sof-defconfig     \
 	 $KCONFIG_DIR/sof-dev-defconfig \
 	 $KCONFIG_DIR/nocodec-defconfig \
+	 $KCONFIG_DIR/telemetry-debugfs-defconfig \
+	 $KCONFIG_DIR/xrun-debug-defconfig \
 	 $@

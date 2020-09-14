@@ -1,6 +1,9 @@
 CONFIG_EXPERT=y
 CONFIG_DYNAMIC_DEBUG=y
 
+# ALSA configurations
+CONFIG_SND_CTL_VALIDATION=y
+
 # Enable OF match for PRP0001 ACPI devices
 CONFIG_OF=y
 

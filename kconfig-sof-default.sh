@@ -10,7 +10,7 @@ if test -f "$FILE"; then
     COMMAND=$FILE;
 else
     # try if the script in a work directory without the -build path
-    CODE_DIR=${BUILD_DIR%-build}
+    CODE_DIR=source
     if test -f "$CODE_DIR/$FILE"; then
 	COMMAND=$CODE_DIR/$FILE;
     else

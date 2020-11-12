@@ -1,6 +1,10 @@
 CONFIG_EXPERT=y
 CONFIG_DYNAMIC_DEBUG=y
 
+# sudo modprobe configs && zgrep SOF_DEBUG /proc/config.gz
+CONFIG_IKCONFIG=m
+CONFIG_IKCONFIG_PROC=y
+
 # ALSA configurations
 CONFIG_SND_CTL_VALIDATION=y
 

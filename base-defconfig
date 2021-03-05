@@ -1,6 +1,9 @@
 CONFIG_EXPERT=y
 CONFIG_DYNAMIC_DEBUG=y
 
+# build netconsole as module to configure it with /etc/modprobe.d
+CONFIG_NETCONSOLE=m
+
 # sudo modprobe configs && zgrep SOF_DEBUG /proc/config.gz
 CONFIG_IKCONFIG=m
 CONFIG_IKCONFIG_PROC=y

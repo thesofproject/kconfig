@@ -13,4 +13,5 @@ $COMMAND .config \
 	 $KCONFIG_DIR/hdaudio-codecs-defconfig \
 	 $KCONFIG_DIR/telemetry-debugfs-defconfig \
 	 $KCONFIG_DIR/lock-stall-defconfig \
-	 $KCONFIG_DIR/soundwire-defconfig $@
+	 $KCONFIG_DIR/soundwire-defconfig \
+	 $@

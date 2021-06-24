@@ -11,4 +11,5 @@ $COMMAND .config \
 	 $KCONFIG_DIR/sof-dev-defconfig \
 	 $KCONFIG_DIR/nocodec-defconfig \
 	 $KCONFIG_DIR/lock-stall-defconfig \
+	 $KCONFIG_DIR/soundwire-defconfig \
 	 $@

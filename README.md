@@ -41,6 +41,10 @@ scripts/kconfig/merge_config.sh .config <PATH>/kconfig/base-defconfig <PATH>/kco
 ````bash
 scripts/kconfig/merge_config.sh .config <PATH>/kconfig/base-defconfig <PATH>/kconfig/sof-defconfig <PATH>/kconfig/mach-driver-defconfig <PATH>/kconfig/hdaudio-codecs-defconfig <PATH>/kconfig/soundwire-defconfig
 ````
+- fuzzing test, for example on SOF-DEFAULT:
+````bash
+scripts/kconfig/merge_config.sh .config <PATH>/kconfig/base-defconfig <PATH>/kconfig/sof-defconfig <PATH>/kconfig/mach-driver-defconfig <PATH>/kconfig/hdaudio-codecs-defconfig <PATH>/kconfig/soundwire-defconfig <PATH>/kconfig/memory-debug-defconfig <PATH>/kconfig/lock-stall-defconfig <PATH>/kconfig/fuzz-defconfig
+````
 
 Or you can generate above pre-defined kconfig with scripts:
 ````bash

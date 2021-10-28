@@ -21,6 +21,11 @@ CONFIG_BTRFS_FS=y
 CONFIG_BTRFS_FS_POSIX_ACL=y
 CONFIG_FUSE_FS=m
 
+# Required to boot some Fedora spins with default settings.
+CONFIG_DM_THIN_PROVISIONING=y
+CONFIG_XFS_FS=y
+CONFIG_IOSCHED_BFQ=y
+
 # Memory management
 CONFIG_FRONTSWAP=y
 

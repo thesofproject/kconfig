@@ -313,3 +313,13 @@ CONFIG_ATH10K_TRACING=y
 # Touchpad fallback if i2c-hid is blacklisted (needed on some TGL devices)
 CONFIG_INPUT_MOUSE=y
 CONFIG_MOUSE_PS2=m
+
+# Scheduling
+# after 5.16-rc1, PREEMPT_VOLUNTARY is the default, but this raises problems
+# with interrupts
+# https://github.com/thesofproject/linux/issues/3283
+# to be bug-compatible with previous releases, PREEMPT is selected explicitly.
+# This should be removed when these issues are resolved.
+CONFIG_PREEMPT_NONE=n
+CONFIG_PREEMPT_VOLUNTARY=n
+CONFIG_PREEMPT=y

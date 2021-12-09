@@ -62,6 +62,15 @@ CONFIG_ZSWAP_ZPOOL_DEFAULT="zbud"
 # build netconsole as module to configure it with /etc/modprobe.d
 CONFIG_NETCONSOLE=m
 
+# Need this when graphics fail (don't forget to drop "quiet splash"
+# in the grub config)
+
+# Even when graphics work, without a framebuffer console `chvt` still
+# works but it is "blind" / with a frozen GUI instead! Incredibly
+# confusing. Linux distributions expect this.
+CONFIG_FB=y
+CONFIG_FRAMEBUFFER_CONSOLE=y
+
 # sudo modprobe configs && zgrep SOF_DEBUG /proc/config.gz
 CONFIG_IKCONFIG=m
 CONFIG_IKCONFIG_PROC=y

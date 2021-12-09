@@ -21,6 +21,16 @@ CONFIG_BTRFS_FS=y
 CONFIG_BTRFS_FS_POSIX_ACL=y
 CONFIG_FUSE_FS=m
 
+# Required by Ubuntu snaps. Avoids a systemctl "degraded" state due to
+# failed snap-*.mount (each snap package has one squashfs mount)
+CONFIG_SQUASHFS=m
+CONFIG_SQUASHFS_XATTR=y
+CONFIG_SQUASHFS_ZLIB=y
+CONFIG_SQUASHFS_LZ4=y
+CONFIG_SQUASHFS_LZO=y
+CONFIG_SQUASHFS_XZ=y
+CONFIG_SQUASHFS_ZSTD=y
+
 # Required to boot some Fedora spins with default settings.
 CONFIG_DM_THIN_PROVISIONING=y
 CONFIG_XFS_FS=y

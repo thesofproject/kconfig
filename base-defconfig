@@ -244,6 +244,10 @@ CONFIG_WMI_BMOF=m
 
 # I2C touchpad (Dell, Asus and many other laptops)
 CONFIG_I2C_HID=m
+CONFIG_I2C_HID_ACPI=m
+CONFIG_I2C_HID_CORE=m
+CONFIG_INTEL_ISH_HID=m
+CONFIG_INTEL_ISH_FIRMWARE_DOWNLOADER=m
 
 # Touchpad support for Broadwell Samus (Pixelbook 2015)
 CONFIG_TOUCHSCREEN_ATMEL_MXT=m

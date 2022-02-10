@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 KCONFIG_DIR=$(dirname ${BASH_SOURCE[0]})
 echo $KCONFIG_DIR
 

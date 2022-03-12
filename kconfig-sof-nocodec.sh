@@ -15,4 +15,5 @@ $COMMAND .config \
 	 $KCONFIG_DIR/amd-defconfig \
 	 $KCONFIG_DIR/nocodec-defconfig \
 	 $KCONFIG_DIR/lock-stall-defconfig \
+	 $KCONFIG_DIR/bpf-defconfig \
 	 $@

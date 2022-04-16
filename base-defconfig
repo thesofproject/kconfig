@@ -13,6 +13,11 @@ CONFIG_THERMAL=y
 CONFIG_THERMAL_GOV_STEP_WISE=y
 CONFIG_THERMAL_GOV_USER_SPACE=y
 
+# This default value (and many others) were changed by upstream commit:
+#   410ce3dd5055b x86/config: Make the x86 defconfigs a bit more usable
+# Disable it again.
+# CONFIG_HYPERVISOR_GUEST is not set
+
 # SElinux
 CONFIG_SECURITY_SELINUX_DISABLE=y
 

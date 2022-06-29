@@ -104,6 +104,12 @@ CONFIG_USB_XHCI_PLATFORM=m
 # Gigabit Ethernet for MinnowBoard Turbot D0/ i211
 CONFIG_IGB=m
 
+# Override linux/arch/x86/configs/x86_64_deconfig:
+# make them modules so they can be blocklisted when needed.
+CONFIG_E100=m
+CONFIG_E1000=m
+CONFIG_E1000E=m
+
 # WIFI
 CONFIG_CFG80211_WEXT=y
 CONFIG_MAC80211_RC_MINSTREL_VHT=y

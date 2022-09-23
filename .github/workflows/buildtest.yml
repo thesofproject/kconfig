@@ -1,0 +1,114 @@
+name: build test
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+
+  gcc-sof-x86_64:
+    name: "GCC build X86_64"
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Fetch linux
+        uses: actions/checkout@v2
+        with:
+          repository: 'thesofproject/linux'
+          path: 'linux'
+
+      - name: Install libelf
+        run: |
+          sudo apt update
+          sudo apt install -y libelf-dev
+
+      - name: build start
+        run: |
+          export ARCH=x86_64 KCFLAGS="-Wall -Werror"
+          export MAKEFLAGS=j"$(nproc)"
+          cd linux
+          bash ../kconfig-sof-default.sh
+          make
+          make bindeb-pkg
+
+  gcc-sof-i386:
+    name: "GCC build i386"
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Fetch linux
+        uses: actions/checkout@v2
+        with:
+          repository: 'thesofproject/linux'
+          path: 'linux'
+
+      - name: build start
+        run: |
+          export ARCH=i386 KCFLAGS="-Wall -Werror"
+          export MAKEFLAGS=j"$(nproc)"
+          cd linux
+          bash ../kconfig-sof-default.sh
+          make sound/
+          make drivers/soundwire/
+          make
+
+  gcc-sof-arm64:
+    name: "GCC build arm64"
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Fetch linux
+        uses: actions/checkout@v2
+        with:
+          repository: 'thesofproject/linux'
+          path: 'linux'
+
+      - name: Install arm64 cross compiler
+        run: |
+          sudo apt update
+          sudo apt install -y gcc-aarch64-linux-gnu
+
+      - name: build start
+        run: |
+          export ARCH=arm64 CROSS_COMPILE=/usr/bin/aarch64-linux-gnu- KCFLAGS="-Wall -Werror"
+          export MAKEFLAGS=j"$(nproc)"
+          cd linux
+          bash ../kconfig-sof-arm64.sh
+          make sound/
+          make drivers/soundwire/
+          make
+
+  clang-sof-x86_64:
+    name: "Clang build x86_64"
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Fetch linux
+        uses: actions/checkout@v2
+        with:
+          repository: 'thesofproject/linux'
+          path: 'linux'
+
+      - name: Install libelf
+        run: |
+          sudo apt update
+          sudo apt install -y libelf-dev
+
+      - name: build start
+        run: |
+          export ARCH=x86_64 CC=clang KCFLAGS="-Wall -Werror"
+          export MAKEFLAGS=j"$(nproc)"
+          cd linux
+          bash ../kconfig-sof-default.sh
+          make sound/
+          make drivers/soundwire/
+          make

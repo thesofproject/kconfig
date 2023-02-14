@@ -73,6 +73,8 @@ CONFIG_NETCONSOLE=m
 # confusing. Linux distributions expect this.
 CONFIG_FB=y
 CONFIG_FRAMEBUFFER_CONSOLE=y
+# add support for using the EFI framebuffer as console
+CONFIG_FB_EFI=y
 
 # sudo modprobe configs && zgrep SOF_DEBUG /proc/config.gz
 CONFIG_IKCONFIG=m

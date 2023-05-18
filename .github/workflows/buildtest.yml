@@ -15,10 +15,10 @@ jobs:
     name: "GCC build X86_64"
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Fetch linux
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: 'thesofproject/linux'
           path: 'linux'
@@ -27,6 +27,11 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y libelf-dev
+
+      - name: Install debhelper
+        run: |
+          sudo apt update
+          sudo apt install -y debhelper
 
       - name: build start
         run: |
@@ -41,10 +46,10 @@ jobs:
     name: "GCC build i386"
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Fetch linux
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: 'thesofproject/linux'
           path: 'linux'
@@ -63,10 +68,10 @@ jobs:
     name: "GCC build arm64"
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Fetch linux
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: 'thesofproject/linux'
           path: 'linux'
@@ -90,10 +95,10 @@ jobs:
     name: "Clang build x86_64"
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Fetch linux
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: 'thesofproject/linux'
           path: 'linux'

@@ -177,3 +177,15 @@ CONFIG_RT2800USB_RT3573=y
 CONFIG_RT2800USB_RT53XX=y
 CONFIG_RT2800USB_RT55XX=y
 CONFIG_RT2800USB_UNKNOWN=y
+
+# This USB-serial converter is embedded on current Intel development
+# boards.  Note the converter chip is on the USB gadget / Type-B / test
+# device side, whereas this cp210x.ko driver runs on the USB host /
+# Type-A / "workstation" side. So why include this driver on test
+# devices = on the "wrong" side?  Because it's much easier to connect
+# two test devices which are already next to each other rather trying to
+# sneak a new USB host on a crowded lab shelf or trying to use a laptop
+# help up in the air. Also, these are modules so not loaded unless
+# actually in use.
+CONFIG_USB_SERIAL=m
+CONFIG_USB_SERIAL_CP210X=m

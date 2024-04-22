@@ -1,6 +1,10 @@
 # These configurations should not be used by distros but only by
 # developers
 
+# top-level configs
+CONFIG_EXPERT=y
+CONFIG_PM_ADVANCED_DEBUG=y
+
 # debug options
 CONFIG_SND_SOC_SOF_DEVELOPER_SUPPORT=y
 CONFIG_SND_SOC_SOF_DEBUG=y

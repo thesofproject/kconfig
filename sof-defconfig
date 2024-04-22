@@ -1,5 +1,7 @@
 # These configurations can be used by distros without issues
 
+CONFIG_DYNAMIC_DEBUG=y
+
 # Generic SOF selections
 CONFIG_SND_SOC_SOF_TOPLEVEL=y
 CONFIG_SND_SOC_SOF_PCI=m

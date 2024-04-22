@@ -1,9 +1,6 @@
 CONFIG_SND_SOC_SOF_HDA_LINK=y
 CONFIG_SND_SOC_SOF_HDA_AUDIO_CODEC=y
 
-# switch to common HDMI codec (patch_hdmi.c)
-CONFIG_SND_SOC_SOF_HDA_COMMON_HDMI_CODEC=y
-
 CONFIG_SND_SOC_INTEL_USER_FRIENDLY_LONG_NAMES=y
 
 # Intel machine drivers supported by SOF and SST

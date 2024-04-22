@@ -10,6 +10,7 @@ echo $KCONFIG_DIR
 make defconfig
 $COMMAND .config \
 	 $KCONFIG_DIR/base-defconfig \
+	 $KCONFIG_DIR/devices-defconfig \
 	 $KCONFIG_DIR/sof-defconfig  \
 	 $KCONFIG_DIR/sof-dev-defconfig  \
 	 $KCONFIG_DIR/amd-defconfig \

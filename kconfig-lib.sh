@@ -1,4 +1,6 @@
-
+#!/bin/bash
+# shellcheck disable=SC2034
+# ^-----^ SC2034 (warning): COMMAND appears unused.
 BUILD_DIR=$(pwd)
 
 # find merge_config in code directory

@@ -20,5 +20,6 @@ $COMMAND .config \
 	 $KCONFIG_DIR/telemetry-debugfs-defconfig \
 	 $KCONFIG_DIR/lock-stall-defconfig \
 	 $KCONFIG_DIR/soundwire-defconfig \
+	 $KCONFIG_DIR/soundwire-codecs-defconfig \
 	 $KCONFIG_DIR/bpf-defconfig \
 	 $@

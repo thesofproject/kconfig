@@ -22,3 +22,6 @@ CONFIG_SND_SOC_RT715_SDCA_SDW=m
 
 # SoundWire mockup codec
 CONFIG_SND_SOC_SDW_MOCKUP=m
+
+# SoundWire SDCA library
+CONFIG_SND_SOC_SDCA=m

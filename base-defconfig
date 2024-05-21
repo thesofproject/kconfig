@@ -146,6 +146,9 @@ CONFIG_INT340X_THERMAL=m
 CONFIG_INT3406_THERMAL=m
 CONFIG_INTEL_PCH_THERMAL=m
 
+# Make fan.ko a module so we can blocklist it on some problematic devices
+CONFIG_ACPI_FAN=m
+
 #
 # Generic IOMMU Pagetable Support
 #

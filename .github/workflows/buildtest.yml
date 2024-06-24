@@ -13,7 +13,7 @@ jobs:
 
   gcc-sof-x86_64:
     name: "GCC build X86_64"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
@@ -44,7 +44,7 @@ jobs:
 
   gcc-sof-i386:
     name: "GCC build i386"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
@@ -66,7 +66,7 @@ jobs:
 
   gcc-sof-arm64:
     name: "GCC build arm64"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
@@ -93,7 +93,7 @@ jobs:
 
   clang-sof-x86_64:
     name: "Clang build x86_64"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 

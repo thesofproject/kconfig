@@ -28,11 +28,6 @@ jobs:
           sudo apt update
           sudo apt install -y libelf-dev
 
-      - name: Install pahole
-        run: |
-          sudo apt update
-          sudo apt install -y pahole
-
       - name: Install debhelper
         run: |
           sudo apt update
@@ -58,16 +53,6 @@ jobs:
         with:
           repository: 'thesofproject/linux'
           path: 'linux'
-
-      - name: Install libelf
-        run: |
-          sudo apt update
-          sudo apt install -y libelf-dev
-
-      - name: Install pahole
-        run: |
-          sudo apt update
-          sudo apt install -y pahole
 
       - name: build start
         run: |
@@ -122,11 +107,6 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y libelf-dev
-
-      - name: Install pahole
-        run: |
-          sudo apt update
-          sudo apt install -y pahole
 
       - name: build start
         run: |

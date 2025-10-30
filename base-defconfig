@@ -216,3 +216,5 @@ CONFIG_DEVFREQ_GOV_PASSIVE=m
 # some systems are locked to X86_X2APIC and can not fall back to the
 #  legacy APIC modes if SGX or TDX are enabled in the BIOS
 CONFIG_X86_X2APIC=y
+
+CONFIG_INTEL_IDLE=y
